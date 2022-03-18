@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  node:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+      target: base
+    volumes:
+      - ./../src:/opt/app/src
+      - ./../nodemon.json:/opt/app/nodemon.json
+    container_name: playground-nodejs-graphql
+    expose:
+      - '8080'
+    ports:
+      - '3217:8080'
+    command: npm run dev

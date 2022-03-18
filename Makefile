@@ -9,7 +9,7 @@ build-dev:
 
 .PHONY: start
 start:
-	@$(DOCKER_COMPOSE) up -d
+	@$(DOCKER_COMPOSE) up -d --force-recreate
 
 .PHONY: stop
 stop:

@@ -7,8 +7,7 @@ services:
       dockerfile: docker/Dockerfile
       target: base
     volumes:
-      - ./../src:/opt/app/src
-      - ./../nodemon.json:/opt/app/nodemon.json
+      - ./..:/opt/app
     container_name: playground-nodejs-graphql
     expose:
       - '8080'
